@@ -1,0 +1,159 @@
+{
+  "run_id": "20260303T195816Z_SSBV",
+  "created_at_utc": "2026-03-03T19:58:18.323901+00:00",
+  "as_of": "2025-03-03",
+  "countries": [
+    "BRA"
+  ],
+  "horizon_q": 4,
+  "scenario": {
+    "financial_tightening": 0.0,
+    "commodity_shock": 0.0,
+    "demand_boost": 0.0
+  },
+  "paths": {
+    "forecast": {
+      "BRA": "forecast_BRA.json"
+    },
+    "drivers": {
+      "BRA": "drivers_BRA.json"
+    },
+    "world_snapshot": "world_snapshot.csv",
+    "train_report": "train_report.json",
+    "backtest_report": "backtest_summary.json",
+    "backtest_plot": "coverage_calibration.png"
+  },
+  "manifest_path": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T195816Z_SSBV/manifest.json",
+  "artifacts_root": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T195816Z_SSBV",
+  "connectors_used": [
+    {
+      "name": "world_bank",
+      "row_count": 245,
+      "enabled": true,
+      "note": "offline sample"
+    },
+    {
+      "name": "oecd",
+      "row_count": 0,
+      "enabled": false,
+      "note": "demo-only local quarterly enrichment"
+    },
+    {
+      "name": "imf",
+      "row_count": 0,
+      "enabled": false,
+      "note": "demo-only local quarterly enrichment"
+    },
+    {
+      "name": "fred",
+      "row_count": 0,
+      "enabled": false,
+      "note": "optional monthly enrichment; requires FRED_API_KEY"
+    },
+    {
+      "name": "bea",
+      "row_count": 32,
+      "enabled": true,
+      "note": "demo-only local component bridge"
+    }
+  ],
+  "backtest": {
+    "metrics": {
+      "by_country": {
+        "BRA": {
+          "mae": 0.007484495426547166,
+          "rmse": 0.007484495426547166,
+          "cov50": 0.0,
+          "cov90": 1.0,
+          "rows": 1
+        },
+        "CHN": {
+          "mae": 0.0074844954265476105,
+          "rmse": 0.0074844954265476105,
+          "cov50": 0.0,
+          "cov90": 1.0,
+          "rows": 1
+        },
+        "DEU": {
+          "mae": 0.0074844954265465,
+          "rmse": 0.0074844954265465,
+          "cov50": 0.0,
+          "cov90": 1.0,
+          "rows": 1
+        },
+        "FRA": {
+          "mae": 0.007484495426547166,
+          "rmse": 0.007484495426547166,
+          "cov50": 0.0,
+          "cov90": 1.0,
+          "rows": 1
+        },
+        "IND": {
+          "mae": 0.007484495426546778,
+          "rmse": 0.007484495426546778,
+          "cov50": 0.0,
+          "cov90": 1.0,
+          "rows": 1
+        },
+        "JPN": {
+          "mae": 0.0074844954265476105,
+          "rmse": 0.0074844954265476105,
+          "cov50": 0.0,
+          "cov90": 1.0,
+          "rows": 1
+        },
+        "MEX": {
+          "mae": 0.0074844954265476105,
+          "rmse": 0.0074844954265476105,
+          "cov50": 0.0,
+          "cov90": 1.0,
+          "rows": 1
+        }
+      },
+      "overall": {
+        "mae": 0.007484495426547206,
+        "rmse": 0.007484495426547205,
+        "mape": 0.019999634629318763,
+        "r2": 0.9999447708650028,
+        "cov50": 0.0,
+        "cov90": 1.0,
+        "crps": 0.004475372281503418,
+        "rows": 7
+      },
+      "by_horizon": {
+        "1": {
+          "mae": 0.007484495426547206,
+          "rmse": 0.007484495426547205,
+          "cov50": 0.0,
+          "cov90": 1.0,
+          "rows": 7
+        }
+      },
+      "calibration": [
+        {
+          "nominal": 0.5,
+          "observed": 0.0
+        },
+        {
+          "nominal": 0.9,
+          "observed": 1.0
+        }
+      ],
+      "origins": [
+        "2026-Q3"
+      ],
+      "horizon_q": 1,
+      "interval_method": "training-residual ensemble quantiles (model-based, not fully probabilistic)"
+    },
+    "files": {
+      "predictions": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T195816Z_SSBV/backtest_predictions.csv",
+      "metrics": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T195816Z_SSBV/backtest_summary.json",
+      "summary": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T195816Z_SSBV/backtest_summary.json",
+      "calibration": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T195816Z_SSBV/backtest_calibration.csv",
+      "forecast_vs_actual": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T195816Z_SSBV/plots/forecast_vs_actual.png",
+      "fan_chart": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T195816Z_SSBV/plots/fan_chart.png",
+      "coverage_plot": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T195816Z_SSBV/plots/coverage_calibration.png",
+      "model_card": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T195816Z_SSBV/MODEL_CARD.md"
+    }
+  }
+}

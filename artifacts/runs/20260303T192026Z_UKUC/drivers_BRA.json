@@ -1,0 +1,38 @@
+{
+  "as_of": "2025-03-03",
+  "drivers": [
+    {
+      "feature": "unemployment",
+      "contribution": 1.0932163332202425
+    },
+    {
+      "feature": "inflation",
+      "contribution": 0.9011551125709444
+    },
+    {
+      "feature": "gdp_growth_lag1",
+      "contribution": -0.805676207272928
+    },
+    {
+      "feature": "gdp_growth_rollmean_2",
+      "contribution": -0.7711029754892621
+    },
+    {
+      "feature": "investment_share",
+      "contribution": 0.7026480525229442
+    },
+    {
+      "feature": "gdp_growth_lag2",
+      "contribution": -0.6362698381138773
+    },
+    {
+      "feature": "inflation_lag1",
+      "contribution": 0.6356260244280068
+    },
+    {
+      "feature": "regime_flag",
+      "contribution": 0.42257712736425834
+    }
+  ],
+  "method": "country_relative_zscore"
+}

@@ -1,0 +1,28 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8501:8501"
+    environment:
+      OFFLINE_MODE: ${OFFLINE_MODE:-1}
+      ARTIFACT_ROOT: /app/artifacts
+      ATLAS_GDP_ROOT: /app
+    volumes:
+      - atlas_gdp_artifacts:/app/artifacts
+
+  db:
+    image: postgres:16-alpine
+    profiles: ["db"]
+    environment:
+      POSTGRES_DB: atlas_gdp
+      POSTGRES_USER: atlas_gdp
+      POSTGRES_PASSWORD: atlas_gdp
+    ports:
+      - "5432:5432"
+    volumes:
+      - atlas_gdp_postgres:/var/lib/postgresql/data
+
+volumes:
+  atlas_gdp_artifacts:
+  atlas_gdp_postgres:

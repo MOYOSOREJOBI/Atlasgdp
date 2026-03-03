@@ -1,0 +1,58 @@
+{
+  "mode": "offline",
+  "countries": [
+    "USA",
+    "CAN",
+    "GBR",
+    "BRA",
+    "DEU",
+    "FRA",
+    "JPN",
+    "IND",
+    "CHN",
+    "MEX"
+  ],
+  "start": 1995,
+  "end": 2026,
+  "row_count": 245,
+  "generated_at": "2026-03-03T21:10:55.870593+00:00",
+  "sources": [
+    {
+      "name": "world_bank",
+      "row_count": 245,
+      "enabled": true,
+      "note": "offline sample"
+    },
+    {
+      "name": "oecd",
+      "row_count": 0,
+      "enabled": false,
+      "note": "OECD cache is missing in offline mode. Run once online to populate cache."
+    },
+    {
+      "name": "imf",
+      "row_count": 0,
+      "enabled": false,
+      "note": "IMF cache is missing in offline mode. Run once online to populate cache."
+    },
+    {
+      "name": "fred",
+      "row_count": 0,
+      "enabled": false,
+      "note": "optional monthly enrichment; requires FRED_API_KEY"
+    },
+    {
+      "name": "bea_demo",
+      "row_count": 32,
+      "enabled": true,
+      "note": "BEA connector is demo-only in this repo. Provide bea_demo_components.csv to override."
+    }
+  ],
+  "connector_status": {
+    "world_bank": "offline_sample",
+    "fred": "disabled",
+    "oecd": "offline_cache_missing",
+    "imf": "offline_cache_missing",
+    "bea_demo": "demo_embedded"
+  }
+}

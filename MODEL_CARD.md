@@ -1,0 +1,23 @@
+# ATLAS-GDP Model Card
+
+## Summary
+ATLAS-GDP is a mixed-frequency GDP nowcasting and forecasting ensemble.
+
+## Latest metrics
+```json
+{
+  "mae": 0.1863004646233418,
+  "rmse": 0.24726895308287336,
+  "mape": 0.12150111082236172,
+  "r2": 0.9109583468562618,
+  "coverage_80": 0.6666666666666666,
+  "crps": 0.14093013188250886,
+  "dm_stat": 3.679936616241333,
+  "mean_loss_diff": 5.257868959935695
+}
+```
+
+## Limitations
+- Data revisions matter.
+- Coverage varies by country.
+- Structural breaks degrade all models.

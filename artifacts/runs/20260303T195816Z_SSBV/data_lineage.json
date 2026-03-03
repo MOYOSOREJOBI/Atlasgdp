@@ -1,0 +1,51 @@
+{
+  "mode": "offline",
+  "countries": [
+    "USA",
+    "CAN",
+    "GBR",
+    "BRA",
+    "DEU",
+    "FRA",
+    "JPN",
+    "IND",
+    "CHN",
+    "MEX"
+  ],
+  "start": 1995,
+  "end": 2026,
+  "row_count": 245,
+  "generated_at": "2026-03-03T19:58:10.145016+00:00",
+  "sources": [
+    {
+      "name": "world_bank",
+      "row_count": 245,
+      "enabled": true,
+      "note": "offline sample"
+    },
+    {
+      "name": "oecd",
+      "row_count": 0,
+      "enabled": false,
+      "note": "demo-only local quarterly enrichment"
+    },
+    {
+      "name": "imf",
+      "row_count": 0,
+      "enabled": false,
+      "note": "demo-only local quarterly enrichment"
+    },
+    {
+      "name": "fred",
+      "row_count": 0,
+      "enabled": false,
+      "note": "optional monthly enrichment; requires FRED_API_KEY"
+    },
+    {
+      "name": "bea",
+      "row_count": 32,
+      "enabled": true,
+      "note": "demo-only local component bridge"
+    }
+  ]
+}

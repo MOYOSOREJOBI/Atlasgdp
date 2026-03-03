@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: atlas-gdp
+    env: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: OFFLINE_MODE
+        value: "1"
+      - key: ASK_ATLAS_ENABLED
+        value: "0"

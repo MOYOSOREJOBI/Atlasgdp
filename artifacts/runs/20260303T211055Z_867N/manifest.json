@@ -1,0 +1,527 @@
+{
+  "run_id": "20260303T211055Z_867N",
+  "created_at_utc": "2026-03-03T21:13:43.729942+00:00",
+  "as_of": "2026-03-03",
+  "horizons": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "countries": [
+    "BRA"
+  ],
+  "scenario": {
+    "tighten": 0.0,
+    "commodity": 0.0,
+    "demand": 0.0
+  },
+  "manifest_path": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/manifest.json",
+  "artifacts_root": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N",
+  "latest_path": "/Users/mac/Desktop/atlas_gdp/artifacts/latest",
+  "bundle_path": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/atlas_gdp_bundle.joblib",
+  "scored_frame_path": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/latest_forecast_frame.parquet",
+  "world_snapshot_path": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/world_snapshot.csv",
+  "lineage_path": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/data_lineage.json",
+  "country_artifacts": {
+    "BRA": {
+      "forecast": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/forecast_BRA.json",
+      "drivers": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/drivers_BRA.json"
+    }
+  },
+  "model_weights": {
+    "ridge": 0.32301330355503366,
+    "hgb": 0.23893897133868244,
+    "bridge": 8.720228643532045e-33,
+    "dfm": 0.0014312066592975011,
+    "midas": 0.2657802218236696,
+    "bvar": 0.26712031819849646
+  },
+  "bundle_summary": {
+    "baseline": {
+      "ridge": "Pipeline",
+      "hgb": "Pipeline",
+      "feature_columns": [
+        "country",
+        "inflation",
+        "population_growth",
+        "investment_share",
+        "trade_share",
+        "unemployment",
+        "gdp_growth_lag1",
+        "gdp_growth_lag2",
+        "gdp_growth_lag3",
+        "inflation_lag1",
+        "trade_share_lag1",
+        "gdp_growth_rollmean_2",
+        "gdp_growth_rollstd_2",
+        "inflation_rollmean_2",
+        "year_trend",
+        "regime_flag"
+      ],
+      "hgb_columns": [
+        "inflation",
+        "population_growth",
+        "investment_share",
+        "trade_share",
+        "unemployment",
+        "gdp_growth_lag1",
+        "gdp_growth_lag2",
+        "gdp_growth_lag3",
+        "inflation_lag1",
+        "trade_share_lag1",
+        "gdp_growth_rollmean_2",
+        "gdp_growth_rollstd_2",
+        "inflation_rollmean_2",
+        "year_trend",
+        "regime_flag",
+        "country_BRA",
+        "country_CAN",
+        "country_CHN",
+        "country_DEU",
+        "country_FRA",
+        "country_GBR",
+        "country_IND",
+        "country_JPN",
+        "country_MEX",
+        "country_USA"
+      ]
+    },
+    "bridge": {
+      "model": "Ridge",
+      "features": [
+        "consumption",
+        "investment",
+        "government",
+        "net_exports"
+      ]
+    },
+    "dfm": {
+      "pca": "PCA",
+      "model": "Ridge",
+      "feature_columns": [
+        "gdp_growth",
+        "inflation",
+        "population_growth",
+        "investment_share",
+        "trade_share",
+        "unemployment"
+      ],
+      "residual_std": 1.6316905063459217
+    },
+    "midas": {
+      "model": "Ridge",
+      "feature_columns": [
+        "gdp_growth",
+        "inflation",
+        "population_growth",
+        "investment_share"
+      ],
+      "weights": "ndarray"
+    },
+    "bvar": {
+      "model": "Ridge",
+      "features": [
+        "gdp_growth",
+        "inflation",
+        "population_growth",
+        "investment_share",
+        "trade_share"
+      ],
+      "residual_std": 0.9377389893712254
+    },
+    "ensemble": {
+      "point_model": "Ridge",
+      "base_columns": [
+        "ridge",
+        "hgb",
+        "bridge",
+        "dfm",
+        "midas",
+        "bvar"
+      ],
+      "quantiles": [
+        0.1,
+        0.5,
+        0.9
+      ],
+      "weight_stability": {
+        "ridge": 0.32301330355503366,
+        "hgb": 0.23893897133868244,
+        "bridge": 8.720228643532045e-33,
+        "dfm": 0.0014312066592975011,
+        "midas": 0.2657802218236696,
+        "bvar": 0.26712031819849646
+      },
+      "residual_quantiles": {
+        "0.1": -0.04667180734321835,
+        "0.9": 0.09422338300338184
+      }
+    },
+    "feature_columns": [
+      "country",
+      "inflation",
+      "population_growth",
+      "investment_share",
+      "trade_share",
+      "unemployment",
+      "gdp_growth_lag1",
+      "gdp_growth_lag2",
+      "gdp_growth_lag3",
+      "inflation_lag1",
+      "trade_share_lag1",
+      "gdp_growth_rollmean_2",
+      "gdp_growth_rollstd_2",
+      "inflation_rollmean_2",
+      "year_trend",
+      "regime_flag"
+    ],
+    "numeric_features": [
+      "gdp_growth",
+      "inflation",
+      "population_growth",
+      "investment_share",
+      "trade_share",
+      "unemployment",
+      "gdp_growth_lag1",
+      "gdp_growth_lag2",
+      "gdp_growth_lag3",
+      "inflation_lag1",
+      "inflation_lag2",
+      "inflation_lag3",
+      "trade_share_lag1",
+      "trade_share_lag2",
+      "trade_share_lag3",
+      "gdp_growth_rollmean_2",
+      "gdp_growth_rollstd_2",
+      "gdp_growth_momentum_2",
+      "gdp_growth_rollmean_3",
+      "gdp_growth_rollstd_3",
+      "gdp_growth_momentum_3",
+      "inflation_rollmean_2",
+      "inflation_rollstd_2",
+      "inflation_momentum_2",
+      "inflation_rollmean_3",
+      "inflation_rollstd_3",
+      "inflation_momentum_3",
+      "year_trend",
+      "regime_flag",
+      "consumption",
+      "investment",
+      "government",
+      "net_exports"
+    ],
+    "created_utc": "str",
+    "config": {
+      "seed": 42,
+      "data": {
+        "countries": [
+          "USA",
+          "CAN",
+          "GBR",
+          "BRA",
+          "DEU",
+          "FRA",
+          "JPN",
+          "IND",
+          "CHN",
+          "MEX"
+        ],
+        "start_year": 1995,
+        "end_year": 2026,
+        "release_lag_days": 45
+      },
+      "run": {
+        "default_horizons": [
+          0,
+          1,
+          2,
+          4,
+          8
+        ],
+        "backtest_horizon": 1,
+        "backtest_min_train_rows": 8,
+        "backtest_max_origins": 12
+      },
+      "world_bank": {
+        "target": "NY.GDP.MKTP.KD.ZG",
+        "indicators": [
+          "NY.GDP.MKTP.KD.ZG",
+          "FP.CPI.TOTL.ZG",
+          "SP.POP.GROW",
+          "NE.GDI.TOTL.ZS",
+          "NE.TRD.GNFS.ZS",
+          "SL.UEM.TOTL.ZS"
+        ]
+      },
+      "ensemble": {
+        "quantiles": [
+          0.1,
+          0.5,
+          0.9
+        ]
+      },
+      "fred": {
+        "series": [
+          "VIXCLS",
+          "DFF",
+          "DGS10"
+        ]
+      }
+    }
+  },
+  "config_snapshot": {
+    "seed": 42,
+    "data": {
+      "countries": [
+        "USA",
+        "CAN",
+        "GBR",
+        "BRA",
+        "DEU",
+        "FRA",
+        "JPN",
+        "IND",
+        "CHN",
+        "MEX"
+      ],
+      "start_year": 1995,
+      "end_year": 2026,
+      "release_lag_days": 45
+    },
+    "run": {
+      "default_horizons": [
+        0,
+        1,
+        2,
+        4,
+        8
+      ],
+      "backtest_horizon": 1,
+      "backtest_min_train_rows": 8,
+      "backtest_max_origins": 12
+    },
+    "world_bank": {
+      "target": "NY.GDP.MKTP.KD.ZG",
+      "indicators": [
+        "NY.GDP.MKTP.KD.ZG",
+        "FP.CPI.TOTL.ZG",
+        "SP.POP.GROW",
+        "NE.GDI.TOTL.ZS",
+        "NE.TRD.GNFS.ZS",
+        "SL.UEM.TOTL.ZS"
+      ]
+    },
+    "ensemble": {
+      "quantiles": [
+        0.1,
+        0.5,
+        0.9
+      ]
+    },
+    "fred": {
+      "series": [
+        "VIXCLS",
+        "DFF",
+        "DGS10"
+      ]
+    }
+  },
+  "settings_snapshot": {
+    "offline_mode": true,
+    "root": "/Users/mac/Desktop/atlas_gdp",
+    "artifact_root": "/Users/mac/Desktop/atlas_gdp/artifacts",
+    "db_url": "sqlite:////Users/mac/Desktop/atlas_gdp/artifacts/atlas_gdp.db",
+    "default_countries": [
+      "USA",
+      "CAN",
+      "GBR",
+      "BRA",
+      "DEU",
+      "FRA",
+      "JPN",
+      "IND",
+      "CHN",
+      "MEX"
+    ],
+    "default_release_lag_days": 45,
+    "config_path": null,
+    "pydantic_settings_available": false
+  },
+  "connectors_used": [
+    {
+      "name": "world_bank",
+      "row_count": 245,
+      "enabled": true,
+      "note": "offline sample"
+    },
+    {
+      "name": "oecd",
+      "row_count": 0,
+      "enabled": false,
+      "note": "OECD cache is missing in offline mode. Run once online to populate cache."
+    },
+    {
+      "name": "imf",
+      "row_count": 0,
+      "enabled": false,
+      "note": "IMF cache is missing in offline mode. Run once online to populate cache."
+    },
+    {
+      "name": "fred",
+      "row_count": 0,
+      "enabled": false,
+      "note": "optional monthly enrichment; requires FRED_API_KEY"
+    },
+    {
+      "name": "bea_demo",
+      "row_count": 32,
+      "enabled": true,
+      "note": "BEA connector is demo-only in this repo. Provide bea_demo_components.csv to override."
+    }
+  ],
+  "connector_status": {
+    "world_bank": "offline_sample",
+    "fred": "disabled",
+    "oecd": "offline_cache_missing",
+    "imf": "offline_cache_missing",
+    "bea_demo": "demo_embedded"
+  },
+  "method_notes": "Quarterly GDP rows are synthesized at quarter-end from annual World Bank series. Monthly inputs are aligned at quarter frequency using quarter means from months available as-of. MIDAS is approximated with explicit monthly lag features plus exponential Almon weights. DFM is approximated with PCA factors fit on standardized monthly indicators at monthly frequency, then averaged to quarter.",
+  "backtest": {
+    "metrics": {
+      "by_country": {
+        "BRA": {
+          "mae": 0.004659825351412513,
+          "rmse": 0.005267715562907469,
+          "cov50": 0.4166666666666667,
+          "cov90": 0.9166666666666666,
+          "rows": 12
+        },
+        "CAN": {
+          "mae": 0.007599846118340359,
+          "rmse": 0.009245379532150108,
+          "cov50": 0.75,
+          "cov90": 1.0,
+          "rows": 4
+        },
+        "CHN": {
+          "mae": 0.004722529337918026,
+          "rmse": 0.005342823586530595,
+          "cov50": 0.4166666666666667,
+          "cov90": 0.9166666666666666,
+          "rows": 12
+        },
+        "DEU": {
+          "mae": 0.004659825351412783,
+          "rmse": 0.005267715562907453,
+          "cov50": 0.4166666666666667,
+          "cov90": 0.9166666666666666,
+          "rows": 12
+        },
+        "FRA": {
+          "mae": 0.004659825351412718,
+          "rmse": 0.005267715562907761,
+          "cov50": 0.4166666666666667,
+          "cov90": 0.9166666666666666,
+          "rows": 12
+        },
+        "GBR": {
+          "mae": 0.01067091702508946,
+          "rmse": 0.011364549828202841,
+          "cov50": 0.5,
+          "cov90": 1.0,
+          "rows": 4
+        },
+        "IND": {
+          "mae": 0.004722529337918104,
+          "rmse": 0.005342823586530581,
+          "cov50": 0.4166666666666667,
+          "cov90": 0.9166666666666666,
+          "rows": 12
+        },
+        "JPN": {
+          "mae": 0.004659825351412739,
+          "rmse": 0.005267715562907405,
+          "cov50": 0.4166666666666667,
+          "cov90": 0.9166666666666666,
+          "rows": 12
+        },
+        "MEX": {
+          "mae": 0.004749094824398781,
+          "rmse": 0.0053487057210582474,
+          "cov50": 0.4166666666666667,
+          "cov90": 0.9166666666666666,
+          "rows": 12
+        },
+        "USA": {
+          "mae": 0.014454159579515458,
+          "rmse": 0.017736451821795354,
+          "cov50": 0.5,
+          "cov90": 0.75,
+          "rows": 4
+        }
+      },
+      "overall": {
+        "mae": 0.005467720310025094,
+        "rmse": 0.0068291599888231115,
+        "mape": 0.01571100469748031,
+        "r2": 0.9999633581006995,
+        "cov50": 0.4375,
+        "cov90": 0.9166666666666666,
+        "crps": 0.003771879391671288,
+        "rows": 96
+      },
+      "by_horizon": {
+        "1": {
+          "mae": 0.005467720310025094,
+          "rmse": 0.0068291599888231115,
+          "cov50": 0.4375,
+          "cov90": 0.9166666666666666,
+          "rows": 96
+        }
+      },
+      "calibration": [
+        {
+          "nominal": 0.5,
+          "observed": 0.4375
+        },
+        {
+          "nominal": 0.9,
+          "observed": 0.9166666666666666
+        }
+      ],
+      "origins": [
+        "2023-Q4",
+        "2024-Q1",
+        "2024-Q2",
+        "2024-Q3",
+        "2024-Q4",
+        "2025-Q1",
+        "2025-Q2",
+        "2025-Q3",
+        "2025-Q4",
+        "2026-Q1",
+        "2026-Q2",
+        "2026-Q3"
+      ],
+      "horizon_q": 1,
+      "interval_method": "training-residual ensemble quantiles (model-based, not fully probabilistic)"
+    },
+    "files": {
+      "predictions": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/backtest_predictions.csv",
+      "metrics": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/backtest_summary.json",
+      "summary": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/backtest_summary.json",
+      "calibration": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/backtest_calibration.csv",
+      "forecast_vs_actual": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/plots/forecast_vs_actual.png",
+      "fan_chart": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/plots/fan_chart.png",
+      "coverage_plot": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/plots/coverage_calibration.png",
+      "model_card": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T211055Z_867N/MODEL_CARD.md"
+    }
+  },
+  "git_hash": null
+}

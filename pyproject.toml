@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atlas-gdp"
+version = "0.1.0"
+description = "Mixed-frequency GDP nowcasting and probabilistic forecasting"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+  {name = "ATLAS-GDP Maintainers"},
+]
+dependencies = [
+  "joblib>=1.4.2",
+  "matplotlib>=3.9.2",
+  "numpy>=1.26.0",
+  "pandaSDMX>=1.10,<2.0",
+  "pandas>=2.2.0",
+  "pydantic>=2.8,<3.0",
+  "pydantic-settings>=2.4,<3.0",
+  "plotly>=5.18",
+  "pyyaml>=6.0.2",
+  "requests>=2.32.0",
+  "scikit-learn>=1.5.0",
+  "scipy>=1.14.1",
+  "statsmodels>=0.14.4",
+  "streamlit>=1.42.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.0",
+  "ruff>=0.6.0",
+]
+
+[project.scripts]
+atlas-gdp = "atlas_gdp.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+ignore = ["E402", "E501"]

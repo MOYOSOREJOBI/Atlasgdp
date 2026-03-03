@@ -1,0 +1,114 @@
+{
+  "run_id": "20260303T212148Z_X55C",
+  "created_at_utc": "2026-03-03T21:22:43.915373+00:00",
+  "as_of": "2026-03-03",
+  "countries": [
+    "BRA"
+  ],
+  "horizon_q": 1,
+  "scenario": {
+    "financial_tightening": 1.0,
+    "commodity_shock": 0.0,
+    "demand_boost": 0.0
+  },
+  "connector_status": {
+    "world_bank": "offline_sample",
+    "fred": "disabled",
+    "oecd": "offline_cache_missing",
+    "imf": "offline_cache_missing",
+    "bea_demo": "demo_embedded"
+  },
+  "method_notes": "Quarterly GDP rows are synthesized at quarter-end from annual World Bank series. Monthly inputs are aligned at quarter frequency using quarter means from months available as-of. MIDAS is approximated with explicit monthly lag features plus exponential Almon weights. DFM is approximated with PCA factors fit on standardized monthly indicators at monthly frequency, then averaged to quarter.",
+  "config_snapshot": {
+    "seed": 42,
+    "data": {
+      "countries": [
+        "USA",
+        "CAN",
+        "GBR",
+        "BRA",
+        "DEU",
+        "FRA",
+        "JPN",
+        "IND",
+        "CHN",
+        "MEX"
+      ],
+      "start_year": 1995,
+      "end_year": 2026,
+      "release_lag_days": 45
+    },
+    "run": {
+      "default_horizons": [
+        0,
+        1,
+        2,
+        4,
+        8
+      ],
+      "backtest_horizon": 1,
+      "backtest_min_train_rows": 8,
+      "backtest_max_origins": 12
+    },
+    "world_bank": {
+      "target": "NY.GDP.MKTP.KD.ZG",
+      "indicators": [
+        "NY.GDP.MKTP.KD.ZG",
+        "FP.CPI.TOTL.ZG",
+        "SP.POP.GROW",
+        "NE.GDI.TOTL.ZS",
+        "NE.TRD.GNFS.ZS",
+        "SL.UEM.TOTL.ZS"
+      ]
+    },
+    "ensemble": {
+      "quantiles": [
+        0.1,
+        0.5,
+        0.9
+      ]
+    },
+    "fred": {
+      "series": [
+        "VIXCLS",
+        "DFF",
+        "DGS10"
+      ]
+    }
+  },
+  "settings_snapshot": {
+    "offline_mode": true,
+    "root": "/Users/mac/Desktop/atlas_gdp",
+    "artifact_root": "/Users/mac/Desktop/atlas_gdp/artifacts",
+    "db_url": "sqlite:////Users/mac/Desktop/atlas_gdp/artifacts/atlas_gdp.db",
+    "default_countries": [
+      "USA",
+      "CAN",
+      "GBR",
+      "BRA",
+      "DEU",
+      "FRA",
+      "JPN",
+      "IND",
+      "CHN",
+      "MEX"
+    ],
+    "default_release_lag_days": 45,
+    "config_path": null,
+    "pydantic_settings_available": false
+  },
+  "paths": {
+    "forecast": {
+      "BRA": "forecast_BRA.json"
+    },
+    "drivers": {
+      "BRA": "drivers_BRA.json"
+    },
+    "world_snapshot": "world_snapshot.csv",
+    "train_report": "train_report.json",
+    "backtest_report": "backtest_summary.json",
+    "backtest_plot": "coverage_calibration.png"
+  },
+  "manifest_path": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T212148Z_X55C/manifest.json",
+  "artifacts_root": "/Users/mac/Desktop/atlas_gdp/artifacts/runs/20260303T212148Z_X55C"
+}
