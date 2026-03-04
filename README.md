@@ -1,5 +1,6 @@
 # ATLAS-GDP
-
+# MOYOSORE OGUNJOBI
+<img width="1791" height="1045" alt="Screenshot 2026-03-03 at 11 08 42" src="https://github.com/user-attachments/assets/a6bbf018-c264-468f-9267-ef849bb498d1" />
 **ATLAS-GDP** is a mixed-frequency macro forecasting system for GDP growth.
 It computes GDP growth consistently, nowcasts the current quarter, and forecasts multiple horizons with uncertainty.
 
